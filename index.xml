@@ -8,24 +8,26 @@
     <language>en-us</language>
     <lastBuildDate>Fri, 02 Apr 2021 16:52:14 +0800</lastBuildDate><atom:link href="http://RaleLee.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>3_30_reading_notes</title>
-      <link>http://RaleLee.github.io/notes/3_30_reading_notes/</link>
+      <title>3-30 reading notes</title>
+      <link>http://RaleLee.github.io/post/3_30_reading_notes/</link>
       <pubDate>Fri, 02 Apr 2021 16:52:14 +0800</pubDate>
       
-      <guid>http://RaleLee.github.io/notes/3_30_reading_notes/</guid>
+      <guid>http://RaleLee.github.io/post/3_30_reading_notes/</guid>
       <description>3-30 Reading Notes Constrained Decoding for Neural NLG from Compositional Representations in Task-Oriented Dialogue ACL 2019
 Motivation 之前对待MR都是线性输入，缺失了其中的结构信息。比如有些slot之间需要对比，有些存在排序。这就需要引入结构化的信息去约束
-想要通过输入就建立一种树形结构来完成，同时输出也是一种树形结构。同时要针对已有的数据集进行改动，增加slot间的关系描述。还新构造一个数据集来提高贡献。
+想要通过输入就建立一种树形结构来完成，同时输出也是一种树形结构。同时要针对已有的数据集进行改动，增加slot间的关系描述。还新构造一个数据集来提高贡献。
 MRs to Tree MRs Tree MRs包含三个部分：
  Argument 可以是回复中应该出现的任意的entity或者slot，有些可能比较复杂，包含了sub-argument（比如date_time包含了week-day+month） Dialog act 就是这句话的回复句式类型，比如：Inform，Recommend等。一个dialog act可以包含一个或者多个argument Discourse relation 约束关系：决定了dialog act之间的关系  一个线性flat的MR难以表现
- argument和dialog act之间的关系 哪些属性应该成组，哪些属性应该对比 某些argument的语义等价性 难以重复使用argument  Model Seq2Seq with linearized trees
+ argument和dialog act之间的关系 哪些属性应该成组，哪些属性应该对比 某些argument的语义等价性 难以重复使用argument  Model Seq2Seq with linearized trees
 encoder decoder都是LSTM+attn，decoder使用beam search
-输入是带有标记的树，输出也是带有树标记的输出。好处是可以直接观察到输入和输出是否对齐
+输入是带有标记的树，输出也是带有树标记的输出。好处是可以直接观察到输入和输出是否对齐
 Constraint Decoder 在Decoding阶段，如果生成了一个未封闭的token，比如[name，那么会检查这个token是否是当前parent的子节点，如果不是就是非法的；或者是否这个token已经在当前的parent节点生成过了，也是非法的，避免repeat和hallucination。
 如果生成了一个封闭的token，比如]或是EOS，那么就检查是否当前parent的所有的children都被生成过了，或者是对current parent进行一个省略。
 在beam search中，违反树约束的候选者分数将被屏蔽，以使得它们不会继续前进。通过在beam search中尽早的删除违反约束的候选，可以使得decoder探索更多的假设情况
 但是依旧会出现hallucinate现象
-Experiment s2s-flat 直接输入flat mr</description>
+Experiment s2s-flat 直接输入flat mr
+s2s-token
+s2s-tree 输入树结构的mr</description>
     </item>
     
     <item>
