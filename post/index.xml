@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Raymond Lee</title>
-    <link>http://RaleLee.github.io/</link>
-    <description>Recent content on Raymond Lee</description>
+    <title>Posts on Raymond Lee</title>
+    <link>http://RaleLee.github.io/post/</link>
+    <description>Recent content in Posts on Raymond Lee</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 02 Apr 2021 15:33:04 +0800</lastBuildDate><atom:link href="http://RaleLee.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 02 Apr 2021 15:33:04 +0800</lastBuildDate><atom:link href="http://RaleLee.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Testpage</title>
       <link>http://RaleLee.github.io/post/testpage/</link>
