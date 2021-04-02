@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Raymond Lee</title>
-    <link>http://RaleLee.github.io/</link>
-    <description>Recent content on Raymond Lee</description>
+    <title>Notes on Raymond Lee</title>
+    <link>http://RaleLee.github.io/notes/</link>
+    <description>Recent content in Notes on Raymond Lee</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 02 Apr 2021 16:52:14 +0800</lastBuildDate><atom:link href="http://RaleLee.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 02 Apr 2021 16:52:14 +0800</lastBuildDate><atom:link href="http://RaleLee.github.io/notes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>3_30_reading_notes</title>
       <link>http://RaleLee.github.io/notes/3_30_reading_notes/</link>
@@ -29,15 +29,6 @@ Constraint Decoder 在Decoding阶段，如果生成了一个未封闭的token，
 在beam search中，违反树约束的候选者分数将被屏蔽，以使得它们不会继续前进。通过在beam search中尽早的删除违反约束的候选，可以使得decoder探索更多的假设情况
 但是依旧会出现hallucinate现象
 Experiment s2s-flat 直接输入flat mr</description>
-    </item>
-    
-    <item>
-      <title>Testpage</title>
-      <link>http://RaleLee.github.io/post/testpage/</link>
-      <pubDate>Fri, 02 Apr 2021 15:33:04 +0800</pubDate>
-      
-      <guid>http://RaleLee.github.io/post/testpage/</guid>
-      <description>&lt;h1 id=&#34;descriptive-text-here&#34;&gt;Descriptive text here&amp;hellip;&lt;/h1&gt;</description>
     </item>
     
   </channel>
